@@ -25,3 +25,4 @@ quadrado (-100, 100, 100)
 screen.onclick (clique)
 screen.listen()
 screen.mainloop()
+
