@@ -1,0 +1,15 @@
+import tkinter
+janela = tkinter.Tk()
+janela.title("Calculadora")
+texto = tkinter.Label (janela, text="Cores fav Monique")
+botao = tkinter.Button (janela, text= "Verde & vermelho")
+
+texto1 = tkinter.Label (janela, text="Minhas cores fav")
+botao1 = tkinter.Button (janela, text= "Azul & roxo")
+
+janela.geometry("350x500")
+texto.pack()
+botao.pack()
+texto1.pack()
+botao1.pack()
+janela.mainloop()
