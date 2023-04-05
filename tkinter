@@ -32,3 +32,30 @@ texto.pack()
 botao.pack()
 janela.mainloop()
 
+PARTE 3
+import tkinter
+janela = tkinter.Tk()
+janela.title("Calculadora")
+
+def soma1():
+    texto["text"] = 1 
+
+def soma2():
+    texto["text"] = 2
+
+def soma3():
+    texto["text"] = 3
+
+
+texto = tkinter.Label (janela, text="Escolha dois numeros")
+botao = tkinter.Button (janela, text= "1", command=soma1)
+botao2 = tkinter.Button (janela, text= "2", command=soma2)
+botao3 = tkinter.Button (janela, text= "3", command=soma3)
+
+
+janela.geometry("350x500")
+texto.pack()
+botao.pack()
+botao2.pack()
+botao3.pack()
+janela.mainloop()
