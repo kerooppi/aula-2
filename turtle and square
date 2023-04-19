@@ -4,22 +4,27 @@ tartaruga = Turtle()
 
 # Esta e a funcao chamada ao se clicar
 def clique(x,y):
-    if 100 < tartaruga.xcor() < 50 and 0 < tartaruga.ycor() < 90:
-        print("Nao posso sair")
+    if 0 < x < 150 and 0 < y < 150:
+        print("Quadrado 1")
+        tartaruga.goto(x,y)
+
+    elif 0 < x < 150 and 0 > y > -150:
+        print("Quadrado 2")
+        tartaruga.goto(x,y)
+
+    elif 0 > x > -150 and 0 > y > -150:
+        print("Quadrado 3")
+        tartaruga.goto(x,y)
+
+    elif 0 > x > -150 and 0 < y < 150:
+        print("Quadrado 4")
+        tartaruga.goto(x,y)
+
     else:
-        print("Estou dentro dos quadrados")
-    tartaruga.goto(x,y)
+        print("Não posso sair")
 
-tartaruga.color("Green", "Brown")
-tartaruga.fd(150)
-tartaruga.left(90)
-tartaruga.fd(150)
-tartaruga.left(90)
-tartaruga.fd(150)
-tartaruga.left(90)
-tartaruga.fd(150)
-
-tartaruga.color("Green", "Brown")
+tartaruga.shape(name="turtle")
+tartaruga.color("Green", "Green")
 tartaruga.fd(150)
 tartaruga.left(90)
 tartaruga.fd(150)
@@ -28,7 +33,7 @@ tartaruga.fd(150)
 tartaruga.left(90)
 tartaruga.fd(150)
 
-tartaruga.color("Green", "Brown")
+tartaruga.color("Green", "Green")
 tartaruga.fd(150)
 tartaruga.left(90)
 tartaruga.fd(150)
@@ -37,7 +42,16 @@ tartaruga.fd(150)
 tartaruga.left(90)
 tartaruga.fd(150)
 
-tartaruga.color("Green", "Brown")
+tartaruga.color("Green", "Green")
+tartaruga.fd(150)
+tartaruga.left(90)
+tartaruga.fd(150)
+tartaruga.left(90)
+tartaruga.fd(150)
+tartaruga.left(90)
+tartaruga.fd(150)
+
+tartaruga.color("Green", "Green")
 tartaruga.fd(150)
 tartaruga.left(90)
 tartaruga.fd(150)
@@ -53,4 +67,3 @@ tartaruga.goto(0,0)
 screen.onclick (clique)
 screen.listen()
 screen.mainloop()
-
