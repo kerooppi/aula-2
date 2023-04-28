@@ -4,58 +4,79 @@ op1 = 0
 op2 = 0
 oper = ' '
 
-
 janela = tkinter.Tk()
 janela.geometry("400x400")
 janela.title("Calculadora")
 
 texto = tkinter.Label(janela, text='Calculadora')
-entrada = tkinter.Entry(janela)
+entrada = tkinter.Entry(janela, justify="right")
 texto.pack()
 entrada.pack(fill='both')
 
 def numero_1():
-    entrada.insert (0, "7")
+    entrada.insert(0, "7")
 
 def numero_2():
-    entrada.insert(0, "8")
-
-def numero_3():
-    entrada.insert(0, "9")
-
-def numero_4():
     entrada.insert(0, "4")
 
+def numero_3():
+    entrada.insert(0, "1")
+
+def numero_4():
+    entrada.insert(0, "0")
+
 def numero_5():
-    entrada.insert(0, "5")
+    entrada.insert(0, "8")
 
 def numero_6():
-    entrada.insert(0, "6")
+    entrada.insert(0, "5")
 
 def numero_7():
-    entrada.insert(0, "1")
-    
-def numero_8():
     entrada.insert(0, "2")
     
+def numero_8():
+    entrada.insert(0, "9")
+    
 def numero_9():
-    entrada.insert(0, "3")
+    entrada.insert(0, "6")
     
 def numero_0():
-    entrada.insert(0, "0")
+    entrada.insert(0, "3")
     
-##def numero_virg():
-
-##def operador_mais():
-##    op1 = Entry.text()
-##    op2 = Entry.text()
+def numero_virg():
+    entrada.insert(0, ",")
     
-##def operador_menos():
+def operador_mais():
+    op1 = int(entrada.get())
+    oper = '+'
+    entrada.insert(0, ' + ')
+    
+def operador_menos():
+    op1 = int(entrada.get())
+    oper = '-'
+    entrada.insert(0, ' - ')
 
-##def igual():
-##    if (entry.text() op1 + op2)
-##    else:
+def operador_vezes():
+    op1 = int(entrada.get())
+    oper = '*'
+    entrada.insert(0, ' x ')
 
+def operador_dividir():
+    op1 = int(entrada.get())
+    oper = '/'
+    entrada.insert(0, ' ÷ ')
+    
+def igual():
+    op2 = int(entrada.get().split(' ')[0])
+    #op1 esta retornando como 0, nao esta atualizando a entrada com o valor
+    if oper == '+':
+        entrada.insert() (op1 + op2)
+    elif oper == '-':
+        entrada.insert() (op1 - op2)
+    elif oper == '*':
+        entrada.insert() (op1 * op2)
+    elif  oper == '/':
+        entrada.insert() (op1 / op2)
 
 quadro_1 = tkinter.Frame(janela)
 quadro_2 = tkinter.Frame(janela)
@@ -83,7 +104,7 @@ botao_4.pack(side = 'top', fill='both', expand=1)
 botao_9 = tkinter.Button(quadro_2,  text='2', command=numero_7)
 botao_9.pack(side = 'top', fill='both', expand=1)
 
-botao_10 = tkinter.Button(quadro_2,  text=',')
+botao_10 = tkinter.Button(quadro_2,  text=',', command=numero_virg)
 botao_10.pack(side = 'top', fill='both', expand=1)
 
 botao_5 = tkinter.Button(quadro_3, text='9', command=numero_8)
@@ -95,19 +116,19 @@ botao_6.pack(side = 'top', fill='both', expand =1)
 botao_11 = tkinter.Button(quadro_3,  text='3', command=numero_0)
 botao_11.pack(side = 'top', fill='both', expand =1)
 
-botao_12 = tkinter.Button(quadro_3,  text='=')
+botao_12 = tkinter.Button(quadro_3,  text='=', command=igual)
 botao_12.pack(side = 'top', fill='both', expand =1)
 
-botao_19 = tkinter.Button(quadro_4, text='÷', bg='#CDCDC0')
+botao_19 = tkinter.Button(quadro_4, text='÷', bg='#CDCDC0', command=operador_dividir)
 botao_19.pack(side = 'top', fill='both', expand=1)
 
-botao_20 = tkinter.Button(quadro_4, text='x', bg='#CDCDC0')
+botao_20 = tkinter.Button(quadro_4, text='x', bg='#CDCDC0', command=operador_vezes)
 botao_20.pack(side = 'top', fill='both', expand=1)
 
-botao_21 = tkinter.Button(quadro_4, text='-', bg='#CDCDC0')
+botao_21 = tkinter.Button(quadro_4, text='-', bg='#CDCDC0', command=operador_menos)
 botao_21.pack(side = 'top', fill='both', expand=1)
 
-botao_22 = tkinter.Button(quadro_4, text='+', bg='#CDCDC0')
+botao_22 = tkinter.Button(quadro_4, text='+', bg='#CDCDC0', command=operador_mais)
 botao_22.pack(side = 'top', fill='both', expand=1)
 
 texto1 = tkinter.Label(janela, text='Desenvolvido por AS FACEIRAS')
@@ -117,8 +138,6 @@ quadro_1.pack(side='left', fill='both', expand=1)
 quadro_2.pack(side='left', fill='both', expand=1)
 quadro_3.pack(side='left', fill='both', expand=1)
 quadro_4.pack(side='left', fill='both', expand=1)
-
-
 
 
 janela.mainloop()
