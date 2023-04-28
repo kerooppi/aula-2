@@ -110,7 +110,7 @@ botao_10.pack(side = 'top', fill='both', expand=1)
 botao_5 = tkinter.Button(quadro_3, text='9', command=numero_8)
 botao_5.pack(side = 'top', fill='both', expand =1)
 
-botao_6 = tkinter.Button(quadro_3, text='6', command=numero_9)
+botao_6 = tkinter.Button(quadro_3, text='6', command=numero_9) 
 botao_6.pack(side = 'top', fill='both', expand =1)
 
 botao_11 = tkinter.Button(quadro_3,  text='3', command=numero_0)
