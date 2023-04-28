@@ -67,3 +67,4 @@ tartaruga.goto(0,0)
 screen.onclick (clique)
 screen.listen()
 screen.mainloop()
+ 
