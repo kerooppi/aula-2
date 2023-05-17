@@ -1,73 +1,126 @@
 import tkinter
 
-nova_operacao = "nao"
+operacao = "nova_operacao"
 
 def numero_1():
-    if nova_operacao = "nao":
+    global operacao
+    if operacao == "nova_operacao":
         entrada.insert(0, "7")
     else:
         entrada.delete(0, 'end')
         entrada.insert(0, "7")
-        nova_operacao = "nao"
 
 def numero_2():
-    entrada.insert(0, "4")
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "4")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "4")
+
 
 def numero_3():
-    entrada.insert(0, "1")
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "1")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "1")
+
 
 def numero_4():
-    entrada.insert(0, "0")
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "0")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "0")
+
 
 def numero_5():
-    entrada.insert(0, "8")
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "8")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "8")
 
 def numero_6():
-    entrada.insert(0, "5")
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "5")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "5")
+
 
 def numero_7():
-    entrada.insert(0, "2")
-    
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "2")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "2")
+
+   
 def numero_8():
-    entrada.insert(0, "9")
-    
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "9")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "9")
+
+   
 def numero_9():
-    entrada.insert(0, "6")
-    
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "6")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "6")
+
+   
 def numero_0():
-    entrada.insert(0, "3")
-    
+    global operacao
+    if operacao == "nova_operacao":
+        entrada.insert(0, "3")
+    else:
+        entrada.delete(0, 'end')
+        entrada.insert(0, "3")
+
+   
 def numero_virg():
     entrada.insert(0, ".")
-    
+   
 def operador_mais():
     entrada.insert(0, ' + ')
-        
+       
 def operador_menos():
     entrada.insert(0, ' - ')
 
 def operador_vezes():
     entrada.insert(0, ' * ')
-    
+   
 def operador_dividir():
     entrada.insert(0, ' ÷ ')
-    
+   
 def igual():
     resposta = eval(entrada.get())
-    
+   
     entrada.delete(0, 'end')
     entrada.insert(0, resposta)
 
 def apagar():
-    janela.delete()
+    entrada.delete(0, 'end')
 
 janela = tkinter.Tk()
+janela.title("CALCULADORA")
 janela.geometry("400x400")
-texto = tkinter.Label(janela, text='Calculadora')
 
-entrada = tkinter.Entry(janela, justify="right")
-texto.pack(side='top')
+entrada = tkinter.Entry(janela, justify="center")
 entrada.pack(fill='both')
+
 
 quadro_1 = tkinter.Frame(janela)
 quadro_2 = tkinter.Frame(janela)
@@ -94,7 +147,7 @@ botao_10.pack(side = 'top', fill='both', expand=1)
 #------------------------------------------------------------------------------------
 botao_5 = tkinter.Button(quadro_3, text='9', command=numero_8)
 botao_5.pack(side = 'top', fill='both', expand =1)
-botao_6 = tkinter.Button(quadro_3, text='6', command=numero_9) 
+botao_6 = tkinter.Button(quadro_3, text='6', command=numero_9)
 botao_6.pack(side = 'top', fill='both', expand =1)
 botao_11 = tkinter.Button(quadro_3,  text='3', command=numero_0)
 botao_11.pack(side = 'top', fill='both', expand =1)
