@@ -5,111 +5,111 @@ operacao = "nova_operacao"
 def numero_1():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "7")
+        entrada.insert('end', "7")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "7")
+        entrada.insert('end', "7")
 
 def numero_2():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "4")
+        entrada.insert('end', "4")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "4")
+        entrada.insert('end', "4")
 
 
 def numero_3():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "1")
+        entrada.insert('end', "1")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "1")
+        entrada.insert('end', "1")
 
 
 def numero_4():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "0")
+        entrada.insert('end', "0")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "0")
+        entrada.insert('end', "0")
 
 
 def numero_5():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "8")
+        entrada.insert('end', "8")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "8")
+        entrada.insert('end', "8")
 
 def numero_6():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "5")
+        entrada.insert('end', "5")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "5")
+        entrada.insert('end', "5")
 
 
 def numero_7():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "2")
+        entrada.insert('end', "2")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "2")
+        entrada.insert('end', "2")
 
    
 def numero_8():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "9")
+        entrada.insert('end', "9")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "9")
+        entrada.insert('end', "9")
 
    
 def numero_9():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "6")
+        entrada.insert('end', "6")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "6")
+        entrada.insert('end', "6")
 
    
 def numero_0():
     global operacao
     if operacao == "nova_operacao":
-        entrada.insert(0, "3")
+        entrada.insert('end', "3")
     else:
         entrada.delete(0, 'end')
-        entrada.insert(0, "3")
+        entrada.insert('end', "3")
 
    
 def numero_virg():
-    entrada.insert(0, ".")
+    entrada.insert('end', ".")
    
 def operador_mais():
-    entrada.insert(0, ' + ')
+    entrada.insert('end', ' + ')
        
 def operador_menos():
-    entrada.insert(0, ' - ')
+    entrada.insert('end', ' - ')
 
 def operador_vezes():
-    entrada.insert(0, ' * ')
+    entrada.insert('end', ' * ')
    
 def operador_dividir():
-    entrada.insert(0, ' ÷ ')
+    entrada.insert('end', ' ÷ ')
    
 def igual():
     resposta = eval(entrada.get())
    
     entrada.delete(0, 'end')
-    entrada.insert(0, resposta)
+    entrada.insert('end', resposta)
 
 def apagar():
     entrada.delete(0, 'end')
